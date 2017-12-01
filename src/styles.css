@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("./assets/css/html.css");
+@import url("./assets/css/layout.css");
+@import url("./assets/css/hotel-widget.css");
+@import url("./assets/css/compare-widget.css");
+@import url("./assets/css/disqus-widget.css");
+@import url("./assets/css/map-widget.css");
+@import url("./assets/css/weather-widget.css");
+@import url("http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css");

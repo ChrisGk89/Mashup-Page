@@ -1,0 +1,10 @@
+#page-middle-local-wrapper {
+	border: 1px solid #DBDBDB;
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 25px;
+	margin-bottom: 25px;
+	position: absolute;
+	left:35%;
+	right: 35%;
+    
+}

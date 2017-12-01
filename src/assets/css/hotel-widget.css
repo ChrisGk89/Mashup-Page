@@ -1,0 +1,24 @@
+#page-right-hotel-wrapper {
+	border: 1px solid #DBDBDB;
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 25px;
+	margin-bottom: 25px;
+}
+
+#page-right-hotel-wrapper input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#page-right-hotel-wrapper table, th, td {
+	font-size: small;
+	border: 1px solid #DBDBDB;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+	margin-top: 25px;
+}
+
+#page-right-hotel-wrapper table th, td {
+	padding: 5px 10px;
+}

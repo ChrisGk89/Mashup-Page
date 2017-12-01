@@ -1,0 +1,18 @@
+#page-left-weather-wrapper {
+	border: 1px solid #DBDBDB;
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 25px;
+	margin-bottom: 25px;
+}
+
+.page-left-weather-forecast-day-wrapper {
+	width: 135px;
+	display: inline-table;
+	text-align: center;
+	padding: 5px;
+}
+
+.page-left-weather-forecast-day-wrapper p {
+	font-size: 11px;
+	margin-top: 5px;
+}

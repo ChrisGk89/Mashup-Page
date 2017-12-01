@@ -1,0 +1,14 @@
+<sebm-google-map [latitude]="DEFAULT_MAP_LAT" [longitude]="DEFAULT_MAP_LNG" [zoom]="DEFAULT_MAP_ZOOM">
+    
+    <sebm-google-map-marker *ngFor="let marker of markers; let i = index" 
+    [latitude]="marker.lat" 
+    [longitude]="marker.lang" 
+    [title]="marker.title" 
+    [visible]="true">
+
+      <sebm-google-map-info-window>
+         <img src="{{marker.img}}" alt="flickr img">
+       </sebm-google-map-info-window>
+    </sebm-google-map-marker>
+
+  </sebm-google-map>

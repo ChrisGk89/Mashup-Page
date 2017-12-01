@@ -1,0 +1,24 @@
+<div id="page-right-compare-wrapper">
+
+  <h2>What about the weather?</h2>
+  <p>Compare the weather in your city with the weather in Växjö. Enter your city's name and the date of weather comparison.</p>
+  
+  <hr />
+  
+  <form>
+  
+    <input #city type="text" id="compare-town" placeholder="Berlin" />
+    <material-datepicker #date  placeholder="{{datePlaceholder}}"></material-datepicker>
+    
+    <button id="compare-submit-btn" (click)="onSubmit(city,date,$event)">Compare weather</button>
+    
+    <div id="page-right-compare-result-wrapper">
+          <div #target></div>
+    </div>
+  
+  </form>
+
+  <div *ngIf="loading" class="loader"></div>
+  
+</div>
+

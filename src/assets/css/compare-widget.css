@@ -1,0 +1,28 @@
+#page-right-compare-wrapper {
+	border: 1px solid #DBDBDB;
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 25px;
+	margin-bottom: 25px;
+}
+
+#page-right-compare-wrapper input {
+	width: 100%;
+	padding: 10px 5px;
+}
+
+#page-right-compare-wrapper table th {
+	text-align: center;
+}
+
+#page-right-compare-wrapper table th, td {
+	width: 50%;
+	padding: 10px 5px;
+}
+
+#page-right-compare-wrapper table, th, td {
+	font-size: small;
+	border: 1px solid #DBDBDB;
+	border-collapse: collapse;
+	text-align: left;
+	margin-top: 25px;
+}
