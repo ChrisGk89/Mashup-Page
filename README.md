@@ -63,4 +63,3 @@ For two components (career and compare), PHP files are necessary. Those PHP file
 ```
 
 
-# mashup-master

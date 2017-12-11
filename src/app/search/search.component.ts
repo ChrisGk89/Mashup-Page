@@ -1,14 +1,14 @@
-//Importing all components outside this file that need to work properly
 import {Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver} from '@angular/core';
-import { WikipediaResultComponent } from './wikipedia-result.component';
-import { WikipediaService } from './wikipedia.service';
 
+import { SearchResultComponent } from './search-result.component';
+
+import { SearchService } from './search.service';
 
 @Component({
-  selector: 'app-wikipedia',
-  templateUrl: './wikipedia.component.html'
+  selector: 'app-search',
+  templateUrl: './search.component.html'
 })
-export class WikipediaComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
   @ViewChild('target', {read: ViewContainerRef}) target:any;
 
@@ -16,7 +16,7 @@ export class WikipediaComponent implements OnInit {
   cmpRefArray:Array<any> = []
   noResult:boolean = false;
 
-  constructor(public wikipediaService:WikipediaService, 
+  constructor(public searchService:SearchService, 
               public resolver:ComponentFactoryResolver) { 
 
   }
@@ -24,11 +24,10 @@ export class WikipediaComponent implements OnInit {
   ngOnInit() {
   }
 
-  //Building the search function that passes the response value in onSearchResultComplete()
   onSearch(input) {
     let title = input.value || input.placeholder;
 
-    this.wikipediaService.getResults(title)
+    this.searchService.getResults(title)
           .subscribe((response)=>{      
              let responseData = this.parseResponse(response['_body']);
              let items = responseData.query.search;
@@ -38,7 +37,6 @@ export class WikipediaComponent implements OnInit {
         )
     }
 
-    //onSearchResultComplete create the components that we see as results 
     onSearchResultsComplete(response) {
 
          for (let i of this.cmpRefArray) {
@@ -64,10 +62,9 @@ export class WikipediaComponent implements OnInit {
             return JSON.parse(responseData);
          }
 
-         //createComponent push the results in cmpArray and cmpRefArray and used by onSearchResultComplete to create the comonents that we see as a result
          createComponent(s:string,t:string)
          {
-         let newComp = this.resolver.resolveComponentFactory(WikipediaResultComponent);
+         let newComp = this.resolver.resolveComponentFactory(SearchResultComponent);
          let cmpRef = this.target.createComponent(newComp);
 
          let cmp = cmpRef.instance;
@@ -78,7 +75,7 @@ export class WikipediaComponent implements OnInit {
          this.cmpArray.push(cmp);
         }
 
-        destroyWikipediaResult() {
+        destroySearchResult() {
         this.cmpRef.destroy();
   }
 }

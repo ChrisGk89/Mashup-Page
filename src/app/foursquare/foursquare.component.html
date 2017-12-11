@@ -1,0 +1,18 @@
+<div id="page-left-foursquare-wrapper">
+
+<div>
+  <h2>Looking for places in Vaxjo to Buy Eat Drink Sleep or have fun?</h2>
+  <p>We help you to find them. Enter the name of the shop or hotel you want to search and leave the rest to us.</p>
+  <hr>
+  <input #foursquareInput placeholder="Super" style="padding: 10px 5px; width: 100%;">
+  <button (click)="onSearch(foursquareInput,$event)">Search</button>
+  <div #target style="margin-top: 20px;">
+
+    <h3 *ngIf="noResult" style="margin-bottom: 15px;">No place listing found...</h3>
+    <p *ngIf="noResult" > Try a different place title and see if you have better luck.</p>
+
+  </div>
+  <div *ngIf="loading" class="loader"></div>
+</div>
+
+</div>

@@ -9,7 +9,7 @@ export class CareerService {
 
     getJobs(title: string) {
       let url = 'http://celtest1.lnu.se/mashup/php/CareerService.php?title=' + title;
-      // let url = 'dist/php/CareerService.php?title=' + title;
+       //let url = 'dist/php/CareerService.php?title=' + title;
       return this.http.get(url)
           .map((res: Response) => res.json());
     }

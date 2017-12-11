@@ -1,35 +1,16 @@
-<div id="page-left-wikipedia-wrapper">
+<!-- Main component div that appears after search button click-->
 
-	<h2>Wikipedia Search</h2>
-					<p>What do you want to search?</p>
-					
-					<hr />
+<div style="background-color: rgba(255, 255, 255, 0.85098); border: 1px solid rgb(219, 219, 219); padding: 25px; margin-bottom: 25px;">
+  <h2>Looking any Wikipedia information?</h2>
+  <p>We help you to search whatever you want. Type anything in Search and let the Wiki magic happen.</p>
+  <hr>
+  <input #wikiInput placeholder="Search Everything" style="padding: 10px 5px; width: 100%;">
+  <button (click)="onSearch(wikiInput)">Search</button>
+  <div #target style="margin-top: 20px;">
 
-<input id="Wikipedia" type="text" placeholder="Learn Everything" style="padding: 10px 5px; width: 100%;"/>
-<button id="btn">Search</button>
-<ul id="display-result"></ul>
+    <h3 *ngIf="noResult" style="margin-bottom: 15px;">No job listing found...</h3>
+    <p *ngIf="noResult" > Try a different job title and see if you have better luck.</p>
 
-<script type="text/javascript">
-
-	   $(document).ready(function(){
-        $('#btn').click(function() {
-            $.ajax({
-                url: 'http://en.wikipedia.org/w/api.php',
-                data: { action: 'query', list: 'search', srsearch: $("input[name=Wikipedia]").val(), format: 'json' },
-                dataType: 'jsonp',
-                success: processResult
-            });
-        });
-    }); 
-
-  function processResult(apiResult){
-     for (var i = 0; i < apiResult.query.search.length; i++){
-          $('#display-result').append('<p>'+apiResult.query.search[i].title+'</p>');
-     }
-  }
-
-
-</script>
-  		
-    
+  </div>
+  <div *ngIf="loading" class="loader"></div>
 </div>

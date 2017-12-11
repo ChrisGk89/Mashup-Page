@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { LocalComponent } from './local.component';
+import { WikipediaResultComponent } from './wikipedia-result.component';
 
-describe('LocalComponent', () => {
-  let component: LocalComponent;
-  let fixture: ComponentFixture<LocalComponent>;
+describe('WikipediaResultComponent', () => {
+  let component: WikipediaResultComponent;
+  let fixture: ComponentFixture<WikipediaResultComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LocalComponent ]
+      declarations: [ WikipediaResultComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LocalComponent);
+    fixture = TestBed.createComponent(WikipediaResultComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { GrouponComponent } from './groupon.component';
+import { FoursquareComponent } from './foursquare.component';
 
-describe('GrouponComponent', () => {
-  let component: GrouponComponent;
-  let fixture: ComponentFixture<GrouponComponent>;
+describe('FoursquareComponent', () => {
+  let component: FoursquareComponent;
+  let fixture: ComponentFixture<FoursquareComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GrouponComponent ]
+      declarations: [ FoursquareComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GrouponComponent);
+    fixture = TestBed.createComponent(FoursquareComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

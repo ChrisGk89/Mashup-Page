@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { WikipediaComponent } from './wikipedia.component';
+import { FoursquareResultComponent } from './foursquare-result.component';
 
-describe('WikipediaComponent', () => {
-  let component: WikipediaComponent;
-  let fixture: ComponentFixture<WikipediaComponent>;
+describe('FoursquareResultComponent', () => {
+  let component: FoursquareResultComponent;
+  let fixture: ComponentFixture<FoursquareResultComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WikipediaComponent ]
+      declarations: [ FoursquareResultComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WikipediaComponent);
+    fixture = TestBed.createComponent(FoursquareResultComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
